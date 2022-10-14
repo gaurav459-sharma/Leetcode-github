@@ -17,7 +17,7 @@ public:
         int bi=0;
         int si;
         for(int i=1;i<n;i++){
-            if(arr[i]<=arr[i-1]){
+            if(arr[i]<arr[i-1]){
                 si=i-1;
                 if(si-bi>0){
                     res.push_back({bi,si});
