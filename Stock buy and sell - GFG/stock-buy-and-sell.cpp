@@ -25,7 +25,7 @@ public:
                 bi=i;
             }
         }
-        if(n-1-bi>0 && arr[bi]!=arr[n-1])res.push_back({bi,n-1});
+        if(n-1-bi>0 )res.push_back({bi,n-1});
         return res;
     }
 };
