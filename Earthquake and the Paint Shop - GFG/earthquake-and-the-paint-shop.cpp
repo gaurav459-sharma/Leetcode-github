@@ -19,14 +19,15 @@ class Solution {
         for(int i=0;i<N;i++){
             mp[A[i]]++;
         }
-        vector<alphanumeric>res(mp.size());
+        vector<alphanumeric>res;
         int k=0;
         for(auto it:mp){
             string s=it.first;
             int ct=it.second;
-            res[k].name=s;
-            res[k].count=ct;
-            k++;
+            // res[k].name=s;
+            // res[k].count=ct;
+            // k++;
+            res.push_back({s,ct});
         }
         return res;
         
