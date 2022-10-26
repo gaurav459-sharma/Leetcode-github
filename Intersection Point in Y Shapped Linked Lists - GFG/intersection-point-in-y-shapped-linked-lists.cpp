@@ -112,7 +112,7 @@ int intersectPoint(Node* head1, Node* head2)
             i++;
             tmp1=tmp1->next;
     }
-    if(tmp1==tmp2)return tmp1->data;
+    if(tmp1==tmp2 &&tmp1!=NULL)return tmp1->data;
     while(tmp1!=NULL &&tmp2!=NULL){
         tmp1=tmp1->next;
         tmp2=tmp2->next;
