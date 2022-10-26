@@ -79,33 +79,27 @@ class Solution
         int carry=0;
         Node*dummy=new Node(0);
         Node*tail=dummy;
-        while(head1!=NULL &&head2!=NULL){
-            int sum=(head1->data+head2->data+carry);
-            int val=sum%10;
-            carry=sum/10;
-            Node*newnode=new Node(val);
-            tail->next=newnode;
-            tail=newnode;
+        while(head1!=NULL||head2!=NULL){
+            int sum;
+            if(head1&&head2){
+            sum=(head1->data+head2->data+carry);
             head1=head1->next;
             head2=head2->next;
-        }
-        while(head1){
-            int sum=(head1->data+carry);
+            }
+            else if(head1){
+                sum=(head1->data+carry);
+                head1=head1->next;
+            }
+            else{
+                sum=(head2->data+carry);
+                head2=head2->next;
+            }
             int val=sum%10;
             carry=sum/10;
             Node*newnode=new Node(val);
             tail->next=newnode;
             tail=newnode;
-            head1=head1->next;
-        }
-        while(head2){
-            int sum=(head2->data+carry);
-            int val=sum%10;
-            carry=sum/10;
-            Node*newnode=new Node(val);
-            tail->next=newnode;
-            tail=newnode;
-            head2=head2->next;
+           
         }
         if(carry){
             Node*newnode=new Node(carry);
