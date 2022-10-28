@@ -114,6 +114,7 @@ class Solution
             if(rans.first)return {root,rans.second};
             return {root,lans.second};
         }
+        root->right=rans.first;
         return {root,rans.second};
         
        
