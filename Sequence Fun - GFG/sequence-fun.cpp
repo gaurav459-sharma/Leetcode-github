@@ -12,11 +12,16 @@ class Solution {
 		int NthTerm(int n){
 		    // Code  here
 		    int mod=1e9+7;
-		    if(n==1)return 2;
-		    long long ans=NthTerm(n-1)%mod;
+		  //  if(n==1)return 2;
+		  //  long long ans=NthTerm(n-1)%mod;
 		  
-		    long long p=(long long)(ans*n+1ll)%mod;
-		    return p;
+		  //  long long p=(long long)(ans*n+1ll)%mod;
+		  //  return p;
+		  int ans=2;
+		  for(int i=2;i<=n;i++){
+		      ans=((long long)ans*i+1ll)%mod;
+		  }
+		  return ans;
 		    
 		}
 
