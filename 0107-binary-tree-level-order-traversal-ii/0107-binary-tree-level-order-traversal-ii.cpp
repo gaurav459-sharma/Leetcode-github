@@ -29,9 +29,9 @@ public:
                 if(front->right)pq.push(front->right);
                 
             }
-            res.push_back(ans);
+            res.emplace(res.begin(),ans);
         }
-        reverse(res.begin(),res.end());
+        // reverse(res.begin(),res.end());
         return res;
     }
 };
