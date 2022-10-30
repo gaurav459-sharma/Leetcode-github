@@ -137,9 +137,9 @@ class Solution {
                    f=1;
                }
            }
-           if(f=1)maxt++;
+           if(f==1)maxt++;
        }
-       return maxt-1;
+       return maxt;
    }
   
   
