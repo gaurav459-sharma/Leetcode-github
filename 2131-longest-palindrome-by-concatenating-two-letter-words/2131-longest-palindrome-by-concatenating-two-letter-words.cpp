@@ -9,8 +9,10 @@ public:
         }
         bool take=false;
         for(int i=0;i<n;i++){
-            string t=words[i];
-            reverse(t.begin(),t.end());
+            string t="";
+            t+=words[i][1];
+            t+=words[i][0];
+           
             // cout<<mp.size()<<" ";
             if(t[0]==t[1] && mp.find(t)!=mp.end()){
                 if(mp[t]>=2){
