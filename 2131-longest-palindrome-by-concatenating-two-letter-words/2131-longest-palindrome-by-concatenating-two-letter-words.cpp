@@ -12,7 +12,7 @@ public:
             string t=words[i];
             reverse(t.begin(),t.end());
             // cout<<mp.size()<<" ";
-            if(t[0]==t[1] && mp.size()>0){
+            if(t[0]==t[1] && mp.find(t)!=mp.end()){
                 if(mp[t]>=2){
                     len+=4;
                     mp[t]-=2;
