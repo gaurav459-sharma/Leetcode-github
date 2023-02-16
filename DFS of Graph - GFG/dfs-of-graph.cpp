@@ -11,7 +11,6 @@ class Solution {
         vis[node]=1;
         for(auto it:adj[node]){
             if(!vis[it]){
-                vis[it]=true;
                 dfs(it,res,vis,adj);
             }
         }
